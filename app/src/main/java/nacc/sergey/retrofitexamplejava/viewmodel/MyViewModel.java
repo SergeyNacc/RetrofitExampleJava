@@ -25,11 +25,10 @@ public class MyViewModel extends ViewModel {
 
         //если список нулевой
         if (heroList == null) {
-            heroList = new MutableLiveData<>();
+            heroList = new MutableLiveData<List<Hero>>();
             //будем загружать его асинхронно с сервера в этом методе
             loadHeroes();
         }
-
         //вернем готовый список
         return heroList;
     }
